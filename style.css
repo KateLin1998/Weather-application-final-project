@@ -22,3 +22,22 @@ body {
 .leaf {
      cursor: url(cursor/leaf.svg), auto;
 }
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 30px 15px 30px;
+    margin: 20px auto;
+    color: rgb(50, 25, 79);
+    border-radius: 50px;
+    border: 1px solid rgb(50, 25, 79);
+    box-shadow: 3px 3px 2px #c8c5cf;
+    transition: all 150ms ease-in-out;
+    font-size: medium;
+    cursor: url(cursor/leaf.svg), auto;
+  }
+
+
+.button:hover {
+    cursor: url(cursor/leaf.svg), auto;
+}
