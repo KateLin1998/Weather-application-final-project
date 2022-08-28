@@ -11,6 +11,7 @@ body {
   }
 
 .container {
+    margin-top: 30px;
     cursor: url(cursor/building.svg), auto;
 }
 
@@ -27,11 +28,12 @@ button {
   }
 
 h1 {
-    color: #878787;
+    color: black;
     font-size: 24px;
     font-weight: 100;
     line-height: 28.8px;
     margin-bottom: 0;
+    margin-left: 20px;
 }
 
 ul {
@@ -41,11 +43,11 @@ ul {
 
 li {
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     color: (135, 135, 135);
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 120px;
     line-height: 19px;
 }
 
@@ -76,6 +78,7 @@ li:first-letter {
 }
 
 .weather-temperature img {
+    margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 30px;
     height: 70px;
