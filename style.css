@@ -122,7 +122,8 @@ li:first-letter {
     top: -34px;
 }
 
-
-.box {
+.weather-temperature .active {
+    color: black;
     cursor: url(cursor/building.svg), auto;
+    text-decoration: none;
 }
