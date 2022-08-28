@@ -1,5 +1,5 @@
 body {
-    cursor: url(cursor/leaf.svg), auto;
+    cursor: url(cursor/building.svg), auto;
     font-family: arial, sans-serif;
     background-image: url(cursor/pedro-lastra-Nyvq2juw4_o-unsplash.jpg);
     background-size: cover;
@@ -11,7 +11,7 @@ body {
   }
 
 .container {
-    cursor: url(cursor/leaf.svg), auto;
+    cursor: url(cursor/building.svg), auto;
 }
 
 button {
@@ -20,7 +20,7 @@ button {
     padding: 15px 30px 15px 30px;
     color: rgb(50, 25, 79);
     border-radius: 50px;
-    border: 1px solid rgb(50, 25, 79);
+    border: 1px solid rgb(237, 236, 238);
     box-shadow: 6px 6px 5px #c8c5cf;
     transition: all 150ms ease-in-out;
     font-size: medium;
@@ -50,14 +50,9 @@ li {
 }
 
 .button:hover {
-    cursor: url(cursor/leaf.svg), auto;
-    background: linear-gradient(
-        91.7deg,
-        rgb(50, 25, 79) -4.3%,
-        rgb(122, 101, 149) 101.8%
-      );
-      border: 1px solid rgb(50, 25, 79);
-      color: white;
+    cursor: url(cursor/building.svg), auto;
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    color: rgb(19, 13, 13);
 }
 
 .weather-app-wrapper {
@@ -69,7 +64,7 @@ li {
     padding: 20 px;
     border: 1px solid #dadde1;
     border-radius: 5px;
-    cursor: url(cursor/leaf.svg), auto;
+    cursor: url(cursor/building.svg), auto;
 }
 
 .overview {
@@ -94,4 +89,9 @@ li {
     position: relative;
     font-size: 16px;
     top: -34px;
+}
+
+
+.box {
+    cursor: url(cursor/building.svg), auto;
 }
