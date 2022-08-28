@@ -23,14 +23,15 @@ body {
 }
 
 button {
-    display: block;
-    margin: 0 auto;
+    display: block !important;
+    margin: 0 auto !important;
+    margin-top: 25px !important;
     padding: 15px 30px 15px 30px;
     color: rgb(50, 25, 79);
-    border-radius: 50px;
+    border-radius: 50px !important;
     border: 1px solid rgb(237, 236, 238);
-    box-shadow: 6px 6px 5px #c8c5cf;
-    transition: all 150ms ease-in-out;
+    box-shadow: 6px 6px 5px rgba(255,255,255,0.7);;
+    transition: all 200ms ease-in-out !important;
     font-size: medium;
   }
 
@@ -38,7 +39,7 @@ button {
     cursor: url(cursor/building.svg), auto !important;
     background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
     color: rgb(19, 13, 13);
-    box-shadow: 6px 6px 5px #c8c5cf;
+    box-shadow: 6px 6px 5px rgba(255,255,255,0.7);
 }
 
 .btn-default {
@@ -97,7 +98,7 @@ li:first-letter {
     padding: 20 px;
     border: 1px solid #dadde1;
     border-radius: 5px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.7);
     cursor: url(cursor/building.svg), auto;
 
 }
@@ -118,7 +119,7 @@ li:first-letter {
     color: rgb(33, 33, 33);
     font-size: 64px;
     font-weight: 400;
-    line-height: 1; 
+    line-height: 1;
 }
 
 .weather-temperature .units {
@@ -131,4 +132,18 @@ li:first-letter {
     color: black;
     cursor: url(cursor/building.svg), auto;
     text-decoration: none;
+}
+
+.weather-forecast {
+    margin-top: 0;
+    text-align: center;
+}
+
+.weather-forecast-date {
+    font-size: 16px;
+    color:rgb(19, 13, 13);
+}
+
+.weather-forecst-temperatures {
+    font-size: 13px;   
 }
