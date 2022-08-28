@@ -1,4 +1,4 @@
-body {
+html, body {
     cursor: url(cursor/building.svg), auto;
     font-family: arial, sans-serif;
     background: url(cursor/pedro-lastra-Nyvq2juw4_o-unsplash.jpg) no-repeat center center fixed;
@@ -130,7 +130,9 @@ li:first-letter {
 
 a {
     cursor: url(cursor/building.svg), auto;
+    text-decoration: none !important;
 }
+
 .weather-temperature .active {
     color: black;
     cursor: url(cursor/building.svg), auto;
