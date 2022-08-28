@@ -8,11 +8,16 @@ body {
 .dark-mode {
     background-image: url(cursor/pedro-lastra-Nyvq2juw4_o-unsplash-modified.jpg);
     background-size: cover;
+    color: white;
   }
 
 .container {
     margin-top: 30px;
     cursor: url(cursor/building.svg), auto;
+}
+
+.form-control {
+    margin-left: 10px;
 }
 
 button {
@@ -26,6 +31,31 @@ button {
     transition: all 150ms ease-in-out;
     font-size: medium;
   }
+
+.button:hover {
+    cursor: url(cursor/building.svg), auto !important;
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    color: rgb(19, 13, 13);
+    box-shadow: 6px 6px 5px #c8c5cf;
+}
+
+.btn-default {
+    background-color: white !important;
+    color: black;
+    margin-left: 20px;
+}
+
+.btn-default:hover {
+    cursor: url(cursor/building.svg), auto !important;
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    border: #e2d1c3;
+    font-style:black;
+}
+
+.btn-default:focus {
+    border: #e2d1c3 !important;
+}
+
 
 h1 {
     color: black;
@@ -53,12 +83,6 @@ li {
 
 li:first-letter {
     text-transform: capitalize;
-}
-
-.button:hover {
-    cursor: url(cursor/building.svg), auto;
-    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-    color: rgb(19, 13, 13);
 }
 
 .weather-app-wrapper {
