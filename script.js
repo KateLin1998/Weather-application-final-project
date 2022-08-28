@@ -4,6 +4,21 @@ function myFunction() {
     document.style.boxShadow = "3px 3px 2px white";
  }
 
+function formatDate(timestamp) {
+    let date = new Date(timestamp);
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+        minutes = `0${minutes}`;
+    }
+    if (hours < 10) {
+        hours = `0${hours}`;
+    }
+    let days = ["Sun", "Mon", "Tue", "Wedn", "Thu", "Fri", "Sat"];
+    let day = days[date.getDay()];
+    return `${day} ${hours}:${minutes}`;
+}
+
 function displayTemperature(response) {
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
@@ -12,6 +27,7 @@ function displayTemperature(response) {
     let maxElement = document.querySelector("#max");
     let minElement = document.querySelector("#min");
     let windElement = document.querySelector("#wind");
+    let dateElement = document.querySelector("#date");
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     humidityElement.innerHTML = response.data.main.humidity;
     cityElement.innerHTML = response.data.name;
@@ -19,6 +35,7 @@ function displayTemperature(response) {
     maxElement.innerHTML = Math.round(response.data.main.temp_max);
     minElement.innerHTML = Math.round(response.data.main.temp_min);
     windElement.innerHTML = Math.round(response.data.wind.speed);
+    dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
  let apiKey = "1b6c0398e1da79a12e6750bada098ecc";
