@@ -42,7 +42,7 @@ function displayForecast(response) {
             <div class="col-2">
                     <div class="weather-forecast-date">${formatDay(forecastDay.dt)}
                     </div>
-                <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="42" />
+                <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}.png" alt="" width="42" />
                 <div class="weather-forecast-temperature">
                 <span class="weather-forecast-temperaute-max"> ${Math.round(forecastDay.temp.max)} /</span> 
                 <span class="weather-forecast-temperaute-min"> ${Math.round(forecastDay.temp.min)}</span>
@@ -79,8 +79,7 @@ function displayTemperature(response) {
     descriptionElement.innerHTML = response.data.weather[0].description;
     windElement.innerHTML = Math.round(response.data.wind.speed);
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
-    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-    iconElement.setAttribute("alt", response.data.weather[0].description);
+    iconElement.setAttribute("src", `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${response.data.weather[0].icon}.svg`);
 
     getForecast(response.data.coord);
 

@@ -46,7 +46,6 @@ button {
     margin-top: 10px;
     background-color: white !important;
     color: black;
-    margin-left: 20px;
 }
 
 .btn-default:hover {
@@ -140,7 +139,8 @@ a {
 }
 
 .weather-forecast {
-    margin-top: 0;
+    margin-top: 0px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
