@@ -42,7 +42,7 @@ function displayForecast(response) {
             <div class="col-2">
                     <div class="weather-forecast-date">${formatDay(forecastDay.dt)}
                     </div>
-                <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}.png" alt="" width="42" />
+                <svg src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${response.data.weather[0].icon}.svg />
                 <div class="weather-forecast-temperature">
                 <span class="weather-forecast-temperaute-max"> ${Math.round(forecastDay.temp.max)} /</span> 
                 <span class="weather-forecast-temperaute-min"> ${Math.round(forecastDay.temp.min)}</span>
