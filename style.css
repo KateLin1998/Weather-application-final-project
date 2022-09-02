@@ -1,14 +1,14 @@
 html, body {
     cursor: url(cursor/building.svg), auto;
     font-family: arial, sans-serif;
-    background: url(cursor/pedro-lastra-Nyvq2juw4_o-unsplash.jpg) no-repeat center center fixed;
+    background: url(cursor/city.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     overflow: hidden;
 }
 
 .dark-mode {
-    background-image: url(cursor/pedro-lastra-Nyvq2juw4_o-unsplash-modified.jpg);
+    background-image: url(cursor/city-modified.jpg);
     background-size: cover;
   }
 
@@ -97,7 +97,7 @@ li:first-letter {
     padding: 20 px;
     border: 1px solid #dadde1;
     border-radius: 5px;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.43);
     cursor: url(cursor/building.svg), auto;
 
 }
@@ -108,10 +108,10 @@ li:first-letter {
 
 .weather-temperature img {
     margin-left: 0;
-    margin-right: 0 !important;
-    margin-bottom: 20px;
-    height: 150px;
-    width: 150px;
+    margin-right: 0;
+    height: 120px;
+    width: 120px;
+    margin-bottom: 30px;
 }
 
 .weather-temperature strong {
@@ -119,7 +119,6 @@ li:first-letter {
     font-size: 80px;
     font-weight: 400;
     line-height: 1;
-    margin-left: 0 auto;
 }
 
 .weather-temperature .units {
@@ -137,6 +136,11 @@ a {
     color: black;
     cursor: url(cursor/building.svg), auto;
     text-decoration: none;
+}
+
+.windSpeed .windIcon {
+    margin-top: 0px;
+    margin-bottom: 30px;
 }
 
 .weather-forecast {

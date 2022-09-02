@@ -1,22 +1,13 @@
 function myFunction() {
     var element = document.body;
     element.classList.toggle("dark-mode");
-    document.style.boxShadow = "3px 3px 2px white";
   }
   
-  function formatDate(timestamp) {
-    let date = new Date(timestamp);
-    let hours = date.getHours();
-    let minutes = date.getMinutes();
-    if (minutes < 10) {
-      minutes = `0${minutes}`;
-    }
-    if (hours < 10) {
-      hours = `0${hours}`;
-    }
-    let days = ["Sun", "Mon", "Tue", "Wedn", "Thu", "Fri", "Sat"];
+  function formatDate() {
+    let date = new Date();
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let day = days[date.getDay()];
-    return `${day} ${hours}:${minutes}`;
+    return `${day}`;
   }
   
   function formatDay(timestamp) {
@@ -73,7 +64,8 @@ function myFunction() {
     let windElement = document.querySelector("#wind");
     let dateElement = document.querySelector("#date");
     let iconElement = document.querySelector("#icon");
-  
+    let windIconElement = document.querySelector("#windIcon");
+
     celsiusTemperature = response.data.main.temp;
   
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -82,11 +74,39 @@ function myFunction() {
     descriptionElement.innerHTML = response.data.weather[0].description;
     windElement.innerHTML = Math.round(response.data.wind.speed);
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
+    if (response.data.wind.speed < 1) {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-0.svg`);
+    } else if (response.data.wind.speed >= 1 && response.data.wind.speed <= 5) {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-1.svg`);  
+    } else if (response.data.wind.speed > 5 && response.data.wind.speed <= 11) {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-2.svg`);
+    } else if (response.data.wind.speed > 11 && response.data.wind.speed <= 19) {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-3.svg`);
+    } else if (response.data.wind.speed > 19 && response.data.wind.speed <= 28) {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-4.svg`);
+    } else if (response.data.wind.speed > 28 && response.data.wind.speed <= 38) {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-5.svg`);
+    } else if (response.data.wind.speed > 38 && response.data.wind.speed <= 49) {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-6.svg`);
+    } else if (response.data.wind.speed > 49 && response.data.wind.speed <= 61) {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-7.svg`);
+    } else if (response.data.wind.speed > 61 && response.data.wind.speed <= 74) {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-8.svg`);
+    } else if (response.data.wind.speed > 74 && response.data.wind.speed <= 88) {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-9.svg`);
+    } else if (response.data.wind.speed > 88 && response.data.wind.speed <= 102) {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-10.svg`);
+    } else if (response.data.wind.speed > 102 && response.data.wind.speed <= 117) {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-11.svg`);
+    } else {
+      windIconElement.setAttribute("src", `wind/wind-beaufort-12.svg`);
+    } 
+
     iconElement.setAttribute(
       "src",
       `animated/${response.data.weather[0].icon}.svg`
     );
-  
+
     getForecast(response.data.coord);
   }
   
@@ -94,6 +114,8 @@ function myFunction() {
     let apiKey = "1b6c0398e1da79a12e6750bada098ecc";
     let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiURL).then(displayTemperature);
+
+    console.log(apiURL);
   }
   
   function handleSubmit(event) {
